@@ -1,13 +1,11 @@
 const form = document.querySelector("#contact-form");
 const formNote = document.querySelector("#form-note");
 
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
+form?.addEventListener("submit", () => {
   const button = form.querySelector("button");
   button.disabled = true;
   button.innerHTML = "Signal reçu <span>✓</span>";
-  formNote.textContent = "Merci. Votre signal a bien été capté — nous revenons vers vous rapidement.";
-  formNote.classList.add("is-sent");
+  formNote.textContent = "Envoi en cours…";
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
